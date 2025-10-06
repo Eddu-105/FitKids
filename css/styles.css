@@ -1,1 +1,123 @@
-/* Estilos */
+@import url('https://fonts.googleapis.com/css2?family=Baloo+2&display=swap');
+
+:root{
+  --accent: #ff6f61;   
+  --link:   #1e88e5;  
+  --text:   #222;      
+  --muted:  #667085;   
+  --bg:     #ffffff; 
+}
+
+header{
+  position: relative;
+  background: var(--bg);
+  box-shadow: 0 6px 16px rgba(0,0,0,.06);
+}
+
+header .wrap{
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 14px 24px;
+  display: flex;
+  align-items: center;          
+  justify-content: space-between;
+  gap: 20px;
+}
+
+
+header img{
+  height: 44px;                
+  width: auto;
+  display: block;
+}
+
+header h1{
+  margin: 0;
+  font-weight: 800;
+  color: var(--text);
+  letter-spacing: .3px;
+}
+
+nav.menu{
+  display: flex;
+  align-items: center;
+  gap: 18px;                   
+  flex-wrap: wrap;
+}
+
+nav.menu a{
+  text-decoration: none;
+  color: var(--link);
+  font-weight: 600;
+  padding: 6px 8px;
+  border-radius: 8px;
+  transition: transform .12s ease, background-color .12s ease, color .12s ease;
+}
+
+nav.menu a:hover{
+  background: rgba(30,136,229,.08);
+  color: var(--text);
+  transform: translateY(-1px);
+}
+
+nav.menu a.activo{
+  background: rgba(255,111,97,.12);
+  color: var(--accent);
+}
+
+header .izq-centro-der{
+  display: grid;
+  grid-template-columns: auto 1fr auto; 
+  align-items: center;
+  gap: 16px;
+}
+
+header .titulo-centro{
+  display: flex;
+  justify-content: center;     
+}
+
+#QuienesSomos .contenedor {
+  display: flex;                    
+  align-items: center;               
+  justify-content: space-between;    
+  gap: 40px;                         
+  max-width: 1200px;                 
+  margin: 40px auto;               
+  padding: 0 20px;
+}
+
+#QuienesSomos .texto {
+  flex: 1 1 55%;                     
+  background-color: #ffffff;         
+  padding: 25px;
+  border-radius: 15px;               
+  box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+  text-align: left;                 
+}
+
+#QuienesSomos .texto h2 {
+  color: #ff6f61;                   
+  font-family: 'Baloo 2', cursive;
+  font-size: 2rem;
+  margin-bottom: 15px;
+}
+
+#QuienesSomos .texto p {
+  font-family: 'Poppins', sans-serif;
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #333;
+}
+
+#QuienesSomos .imagen {
+  flex: 1 1 45%;          
+  display: flex;
+  justify-content: center;
+}
+
+#QuienesSomos .imagen img {
+  max-width: 100%;
+  border-radius: 15px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+}
