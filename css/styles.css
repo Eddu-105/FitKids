@@ -8,32 +8,39 @@
   --bg:     #ffffff; 
 }
 
-header{
+.encabezado {
   position: relative;
   background: var(--bg);
   box-shadow: 0 6px 16px rgba(0,0,0,.06);
 }
 
-header .wrap{
+.encabezado .contenedor {
   max-width: 1200px;
   margin: 0 auto;
   padding: 14px 24px;
   display: flex;
-  align-items: center;          
+  align-items: center;
   justify-content: space-between;
   gap: 20px;
 }
 
+.logo-titulo {
+  display: flex;
+  align-items: center;
+  gap: 10px; 
+}
 
-header img{
-  height: 44px;                
+.logo {
+  height: 50px;
   width: auto;
   display: block;
 }
 
-header h1{
+.titulo {
   margin: 0;
+  font-family: 'Baloo 2', sans-serif;
   font-weight: 800;
+  font-size: 1.8rem;
   color: var(--text);
   letter-spacing: .3px;
 }
@@ -47,6 +54,7 @@ nav.menu{
 
 nav.menu a{
   text-decoration: none;
+  font-family: 'Poppins', sans-serif;
   color: var(--link);
   font-weight: 600;
   padding: 6px 8px;
