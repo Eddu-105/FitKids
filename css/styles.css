@@ -8,6 +8,14 @@
   --bg:     #ffffff; 
 }
 
+body {
+  background-image: url('../img/fondo_Fitkids.jpg'); 
+  background-size: cover;          
+  background-position: center;     
+  background-repeat: no-repeat;    
+  background-attachment: fixed;    
+}
+
 .encabezado {
   position: relative;
   background: var(--bg);
@@ -128,4 +136,49 @@ header .titulo-centro{
   max-width: 100%;
   border-radius: 15px;
   box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+}
+
+#QueBuscamos .contenedor {
+  display: flex;                    
+  align-items: center;               
+  justify-content: space-between;    
+  gap: 40px;                         
+  max-width: 1200px;                 
+  margin: 40px auto;               
+  padding: 0 20px;
+}
+
+#QueBuscamos .imagen {
+  flex: 1 1 45%;          
+  display: flex;
+  justify-content: center;
+}
+
+#QueBuscamos .imagen img {
+  max-width: 100%;
+  border-radius: 15px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+}
+
+#QueBuscamos .texto {
+  flex: 1 1 55%;                     
+  background-color: #ffffff;         
+  padding: 25px;
+  border-radius: 15px;               
+  box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+  text-align: left;                 
+}
+
+#QueBuscamos .texto h2 {
+  color: #ff6f61;                   
+  font-family: 'Baloo 2', cursive;
+  font-size: 2rem;
+  margin-bottom: 15px;
+}
+
+#QueBuscamos .texto p {
+  font-family: 'Poppins', sans-serif;
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #333;
 }
