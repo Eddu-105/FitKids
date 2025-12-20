@@ -1,28 +1,205 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Fitkids</title>
-    <link rel="icon" href="../img/logo_fit_kids.png" type="image/png">
-    <link rel="stylesheet" href="../css/styles.css">
+  <meta charset="UTF-8">
+  <title>Tienda | FitKids</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="../img/logo_fit_kids.png">
+  <link rel="stylesheet" href="../css/styles.css">
 </head>
-<body>
-    <header class="encabezado">
-        <div class="contenedor">
-            <div class="logo-titulo">
-                <a href="index.html">
-                <img src="../img/logo_fit_kids.png" alt="Logo FitKids" width="60" class="logo">
-                </a>
-                <h1 class="titulo">FitKids</h1>
-            </div>
 
-        <nav class="menu">
-            <a href="quienesSomos.html">QUIÉNES SOMOS</a>
-            <a href="registro.html">REGÍSTRATE</a>
-            <a href="sesion.html">INICIAR SESIÓN</a>
-        </nav>
+<body>
+
+<header class="encabezado">
+  <div class="contenedor">
+    <div class="logo-titulo">
+      <a href="index.html">
+        <img src="../img/logo_fit_kids.png" alt="Logo FitKids" class="logo">
+      </a>
+      <h1 class="titulo">FitKids</h1>
+    </div>
+
+    <nav class="menu">
+      <a href="quienesSomos.html">Quiénes somos</a>
+      <a href="tienda.html" class="activo">Tienda</a>
+      <a href="registro.html">Regístrate</a>
+      <a href="sesion.html">Iniciar sesión</a>
+    </nav>
+  </div>
+</header>
+
+<section class="tienda-hero">
+  <div class="contenedor">
+    <h2>Tienda FitKids</h2>
+    <p>
+      Planes de entrenamiento pre-operacional y productos pensados para el bienestar físico de niños:
+      movimiento, juego y hábitos saludables.
+    </p>
+
+    <div class="tienda-toolbar">
+      <a class="chip" href="#planes">Planes</a>
+      <a class="chip" href="#kits">Kits</a>
+      <a class="chip" href="#merch">Accesorios</a>
+    </div>
+  </div>
+</section>
+
+<section id="planes" class="tienda">
+  <div class="contenedor">
+    <h2 class="titulo" style="text-align:center; margin-bottom:18px;">Planes</h2>
+
+    <div class="grid-tienda">
+      <article class="producto">
+        <img class="thumb" src="../img/estacion.png" alt="Plan Inicial">
+        <div class="info">
+          <span class="badge">Recomendado</span>
+          <h3>Plan Inicial</h3>
+          <p>Ideal para comenzar: coordinación, equilibrio y juegos guiados.</p>
+          <div class="meta">
+            <span class="precio">S/ 99 / mes</span>
+            <a class="btn-secundario" href="registro.html">Inscribirme</a>
+          </div>
         </div>
-    </header>
+      </article>
+
+      <article class="producto">
+        <img class="thumb" src="../img/FitKids_juntos.jpg" alt="Plan Progreso">
+        <div class="info">
+          <span class="badge">Progreso</span>
+          <h3>Plan Progreso</h3>
+          <p>Más sesiones y retos: fuerza funcional y resistencia adaptada.</p>
+          <div class="meta">
+            <span class="precio">S/ 149 / mes</span>
+            <a class="btn-secundario" href="registro.html">Inscribirme</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="producto">
+        <img class="thumb" src="../img/paracaidas_fitkids.png" alt="Plan Full">
+        <div class="info">
+          <span class="badge">Full</span>
+          <h3>Plan Full</h3>
+          <p>Entrenamiento + juegos avanzados + seguimiento de hábitos.</p>
+          <div class="meta">
+            <span class="precio">S/ 199 / mes</span>
+            <a class="btn-secundario" href="registro.html">Inscribirme</a>
+          </div>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section id="kits" class="tienda">
+  <div class="contenedor">
+    <h2 class="titulo" style="text-align:center; margin-bottom:18px;">Kits</h2>
+
+    <div class="grid-tienda">
+      <article class="producto">
+        <img class="thumb" src="../img/paracaidas_fitkids.png" alt="Kit Coordinación">
+        <div class="info">
+          <span class="badge">En casa</span>
+          <h3>Kit Coordinación</h3>
+          <p>Actividades simples para practicar coordinación y equilibrio en casa.</p>
+          <div class="meta">
+            <span class="precio">S/ 49</span>
+            <a class="btn-secundario" href="registro.html">Pedir info</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="producto">
+        <img class="thumb" src="../img/estacion.png" alt="Kit Movimiento">
+        <div class="info">
+          <span class="badge">Juego</span>
+          <h3>Kit Movimiento</h3>
+          <p>Retos de movimiento y juegos guiados para hábitos saludables.</p>
+          <div class="meta">
+            <span class="precio">S/ 59</span>
+            <a class="btn-secundario" href="registro.html">Pedir info</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="producto">
+        <img class="thumb" src="../img/FitKids_juntos.jpg" alt="Kit Familiar">
+        <div class="info">
+          <span class="badge">Familiar</span>
+          <h3>Kit Familiar</h3>
+          <p>Guía para practicar en familia: motivación, rutinas cortas y juego.</p>
+          <div class="meta">
+            <span class="precio">S/ 69</span>
+            <a class="btn-secundario" href="registro.html">Pedir info</a>
+          </div>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section id="merch" class="tienda">
+  <div class="contenedor">
+    <h2 class="titulo" style="text-align:center; margin-bottom:18px;">Accesorios</h2>
+
+    <div class="grid-tienda">
+      <article class="producto">
+        <img class="thumb" src="../img/fondo_Fitkids.jpg" alt="Botella FitKids">
+        <div class="info">
+          <span class="badge">Accesorio</span>
+          <h3>Botella FitKids</h3>
+          <p>Hidratación para niños durante las sesiones (material ligero).</p>
+          <div class="meta">
+            <span class="precio">S/ 25</span>
+            <a class="btn-secundario" href="registro.html">Pedir info</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="producto">
+        <img class="thumb" src="../img/fondo_Fitkids.jpg" alt="Polo FitKids">
+        <div class="info">
+          <span class="badge">Merch</span>
+          <h3>Polo FitKids</h3>
+          <p>Ropa cómoda para juego y movimiento (tallas infantiles).</p>
+          <div class="meta">
+            <span class="precio">S/ 35</span>
+            <a class="btn-secundario" href="registro.html">Pedir info</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="producto">
+        <img class="thumb" src="../img/fondo_Fitkids.jpg" alt="Gorra FitKids">
+        <div class="info">
+          <span class="badge">Merch</span>
+          <h3>Gorra FitKids</h3>
+          <p>Accesorio ideal para actividades al aire libre.</p>
+          <div class="meta">
+            <span class="precio">S/ 28</span>
+            <a class="btn-secundario" href="registro.html">Pedir info</a>
+          </div>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="confianza">
+  <div class="box">
+    <h3>Seguridad y bienestar primero</h3>
+    <ul>
+      <li>Actividades adaptadas por edad y nivel.</li>
+      <li>Enfoque pre-operacional: juego, coordinación y hábitos saludables.</li>
+      <li>Ambiente controlado y motivador.</li>
+      <li>Si necesitas horarios o sede, regístrate y te contactamos.</li>
+    </ul>
+  </div>
+</section>
+
+<footer>
+  © 2025 FitKids · Bienestar físico infantil
+</footer>
+
 </body>
 </html>

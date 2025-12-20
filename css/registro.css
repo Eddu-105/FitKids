@@ -1,0 +1,70 @@
+.seccion-registro {
+  padding: 90px 20px;
+  display: flex;
+  justify-content: center;
+}
+
+.card-registro {
+  background: #ffffff;
+  max-width: 420px;
+  width: 100%;
+  padding: 35px;
+  border-radius: 22px;
+  box-shadow: 0 14px 32px rgba(0,0,0,.18);
+}
+
+.card-registro h2 {
+  font-family: 'Baloo 2', cursive;
+  color: #ff6f61;
+  font-size: 2rem;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.card-registro p {
+  text-align: center;
+  font-size: 0.95rem;
+  color: #555;
+  margin-bottom: 25px;
+}
+
+/* Formulario */
+.card-registro label {
+  font-weight: 600;
+  font-size: 0.9rem;
+  margin-top: 12px;
+  display: block;
+}
+
+.card-registro input {
+  width: 100%;
+  margin-top: 6px;
+  padding: 11px;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+}
+
+.card-registro input:focus {
+  outline: none;
+  border-color: #1e88e5;
+}
+
+.card-registro button {
+  width: 100%;
+  margin-top: 22px;
+  padding: 14px;
+  background: #ff6f61;
+  color: white;
+  border: none;
+  border-radius: 30px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform .2s, box-shadow .2s;
+}
+
+.card-registro button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 25px rgba(0,0,0,.25);
+}

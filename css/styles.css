@@ -1,24 +1,39 @@
-@import url('https://fonts.googleapis.com/css2?family=Baloo+2&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Baloo+2:wght@600;800&family=Poppins:wght@400;600&display=swap');
 
-body {
-  background-image: url('../img/fondo_Fitkids.jpg'); 
-  background-size: cover;          
-  background-position: center;     
-  background-repeat: no-repeat;    
-  background-attachment: fixed;    
+/* ================= RESET ================= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #f7f9fc;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* ================= CONTENEDOR GLOBAL ================= */
+/* IMPORTANTE: aquí NO hay flex ni grid */
+.contenedor {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* ================= HEADER ================= */
 .encabezado {
-  position: relative;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
   background: white;
-  box-shadow: 0 6px 16px rgba(0,0,0,.06);
+  box-shadow: 0 4px 12px rgba(0,0,0,.08);
 }
 
 .encabezado .contenedor {
-  max-width: 1200px;
-  margin: 0 auto;
   padding: 14px 24px;
-  display: flex;
+  display: flex;                 /* flex SOLO aquí */
   align-items: center;
   justify-content: space-between;
   gap: 20px;
@@ -27,61 +42,506 @@ body {
 .logo-titulo {
   display: flex;
   align-items: center;
-  gap: 10px; 
+  gap: 10px;
 }
 
 .logo {
-  height: 50px;
-  width: auto;
-  display: block;
+  height: 48px;
 }
 
 .titulo {
-  margin: 0;
-  font-family: 'Baloo 2', sans-serif;
-  font-weight: 800;
+  font-family: 'Baloo 2', cursive;
   font-size: 1.8rem;
-  color: black;
-  letter-spacing: .3px;
+  font-weight: 800;
 }
 
-nav.menu{
+.menu {
+  display: flex;
+  gap: 18px;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+}
+
+.menu a {
+  text-decoration: none;
+  font-weight: 600;
+  color: #1e88e5;
+  padding: 6px 10px;
+  border-radius: 8px;
+  transition: background .2s;
+}
+
+.menu a:hover,
+.menu a.activo {
+  background: rgba(30,136,229,.12);
+}
+
+/* ================= HERO (INDEX) ================= */
+.hero {
+  min-height: 85vh;
+  background:
+    linear-gradient(rgba(0,0,0,.55), rgba(0,0,0,.55)),
+    url('../img/fondo_Index.png') center/cover no-repeat;
   display: flex;
   align-items: center;
-  gap: 18px;                   
+  justify-content: center;
+  text-align: center;
+}
+
+.hero-contenido {
+  max-width: 700px;
+  color: white;
+  padding: 20px;
+}
+
+.hero h2 {
+  font-family: 'Baloo 2', cursive;
+  font-size: 3rem;
+  margin-bottom: 15px;
+}
+
+.hero p {
+  font-size: 1.1rem;
+  margin-bottom: 30px;
+}
+
+/* ================= BOTÓN ================= */
+.btn-principal {
+  display: inline-block;
+  background: #ff6f61;
+  color: white;
+  padding: 14px 32px;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+  transition: transform .2s, box-shadow .2s;
+}
+
+.btn-principal:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 25px rgba(0,0,0,.25);
+}
+
+/* ================= BENEFICIOS (INDEX) ================= */
+.beneficios {
+  padding: 80px 20px;
+  background: white;
+}
+
+.beneficios h3 {
+  text-align: center;
+  font-family: 'Baloo 2', cursive;
+  font-size: 2.2rem;
+  color: #ff6f61;
+  margin-bottom: 40px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.card {
+  background: #f7f9fc;
+  padding: 25px;
+  border-radius: 16px;
+  text-align: center;
+  box-shadow: 0 8px 20px rgba(0,0,0,.1);
+  transition: transform .2s;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.card h4 {
+  color: #1e88e5;
+  margin-bottom: 10px;
+  font-size: 1.3rem;
+}
+
+/* ================= SECCIÓN GENÉRICA ================= */
+/* Esto NO toca contenedor, solo da padding */
+.seccion {
+  padding: 70px 20px;
+}
+
+.seccion-flex {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+
+/* el texto y la imagen tienen proporción fija */
+.seccion-flex .texto {
+  flex: 1 1 55%;
+}
+
+.seccion-flex img {
+  flex: 0 1 45%;
+  max-width: 520px;     /* <- límite real para que no se vean enormes */
+  width: 100%;
+  height: auto;
+  border-radius: 18px;
+  box-shadow: 0 10px 25px rgba(0,0,0,.12);
+  object-fit: cover;
+}
+
+/* ================= FORMULARIOS ================= */
+.form-card {
+  background: #fff;
+  max-width: 440px;
+  width: 100%;
+  padding: 35px;
+  border-radius: 22px;
+  box-shadow: 0 14px 32px rgba(0,0,0,.18);
+}
+
+.form-card h2 {
+  font-family: 'Baloo 2', cursive;
+  color: #ff6f61;
+  font-size: 2rem;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.form-card p {
+  text-align: center;
+  font-size: 0.95rem;
+  color: #555;
+  margin-bottom: 22px;
+}
+
+label {
+  margin-top: 12px;
+  font-weight: 600;
+  font-size: 0.9rem;
+  display: block;
+}
+
+input {
+  width: 100%;
+  margin-top: 6px;
+  padding: 11px 12px;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+}
+
+input:focus {
+  outline: none;
+  border-color: #1e88e5;
+  box-shadow: 0 0 0 4px rgba(30,136,229,.12);
+}
+
+/* ================= TIENDA ================= */
+
+.tienda-hero{
+  padding: 70px 20px;
+  background:
+    linear-gradient(rgba(30,136,229,.10), rgba(255,111,97,.10));
+}
+
+.tienda-hero .contenedor{
+  text-align: center;
+}
+
+.tienda-hero h2{
+  font-family: 'Baloo 2', cursive;
+  font-size: 2.4rem;
+  color: #ff6f61;
+  margin-bottom: 10px;
+}
+
+.tienda-hero p{
+  max-width: 800px;
+  margin: 0 auto;
+  color: #444;
+}
+
+.tienda-toolbar{
+  padding: 22px 0 0 0;
+  display: flex;
+  gap: 12px;
+  justify-content: center;
   flex-wrap: wrap;
 }
 
-nav.menu a{
-  text-decoration: none;
-  font-family: 'Poppins', sans-serif;
+.chip{
+  display: inline-block;
+  background: rgba(30,136,229,.10);
   color: #1e88e5;
+  padding: 8px 12px;
+  border-radius: 999px;
   font-weight: 600;
-  padding: 6px 8px;
-  border-radius: 8px;
-  transition: transform .12s ease, background-color .12s ease, color .12s ease;
+  font-size: .95rem;
+  text-decoration: none;
+  transition: transform .15s, background .15s;
 }
 
-nav.menu a:hover{
-  background: rgba(30,136,229,.08);
-  color: black;
-  transform: translateY(-1px);
+.chip:hover{
+  transform: translateY(-2px);
+  background: rgba(30,136,229,.16);
 }
 
-nav.menu a.activo{
+.tienda{
+  padding: 70px 20px;
+}
+
+.grid-tienda{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 22px;
+}
+
+.producto{
+  background: #fff;
+  border-radius: 18px;
+  overflow: hidden;
+  box-shadow: 0 10px 26px rgba(0,0,0,.10);
+  transition: transform .2s, box-shadow .2s;
+}
+
+.producto:hover{
+  transform: translateY(-4px);
+  box-shadow: 0 14px 34px rgba(0,0,0,.14);
+}
+
+.producto .thumb{
+  width: 100%;
+  height: 190px;
+  object-fit: cover;
+  display: block;
+}
+
+.producto .info{
+  padding: 18px 18px 20px 18px;
+}
+
+.producto .badge{
+  display: inline-block;
   background: rgba(255,111,97,.12);
   color: #ff6f61;
+  font-weight: 700;
+  font-size: .82rem;
+  padding: 6px 10px;
+  border-radius: 999px;
+  margin-bottom: 10px;
 }
 
-header .izq-centro-der{
-  display: grid;
-  grid-template-columns: auto 1fr auto; 
-  align-items: center;
-  gap: 16px;
+.producto h3{
+  font-family: 'Baloo 2', cursive;
+  font-size: 1.35rem;
+  margin-bottom: 6px;
 }
 
-header .titulo-centro{
+.producto p{
+  color: #555;
+  font-size: .95rem;
+  margin-bottom: 14px;
+}
+
+.producto .meta{
   display: flex;
-  justify-content: center;     
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
 }
 
+.precio{
+  font-weight: 800;
+  color: #1e88e5;
+}
+
+.btn-secundario{
+  display: inline-block;
+  padding: 10px 14px;
+  border-radius: 999px;
+  text-decoration: none;
+  font-weight: 700;
+  background: rgba(30,136,229,.10);
+  color: #1e88e5;
+  transition: transform .15s, background .15s;
+}
+
+.btn-secundario:hover{
+  transform: translateY(-2px);
+  background: rgba(30,136,229,.16);
+}
+
+.confianza{
+  padding: 70px 20px;
+  background: white;
+}
+
+.confianza .box{
+  max-width: 1200px;
+  margin: 0 auto;
+  background: #f7f9fc;
+  border-radius: 18px;
+  padding: 26px;
+  box-shadow: 0 10px 24px rgba(0,0,0,.08);
+}
+
+.confianza h3{
+  font-family: 'Baloo 2', cursive;
+  color: #ff6f61;
+  font-size: 1.9rem;
+  margin-bottom: 12px;
+}
+
+.confianza ul{
+  margin-left: 18px;
+  color: #444;
+}
+
+.confianza li{
+  margin: 6px 0;
+}
+
+/* ================= INICIAR SESIÓN ================= */
+
+.auth {
+  padding: 90px 20px;
+}
+
+.auth-layout {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 26px;
+  align-items: center;
+}
+
+.auth-panel {
+  background: #ffffff;
+  border-radius: 22px;
+  box-shadow: 0 14px 32px rgba(0,0,0,.18);
+  overflow: hidden;
+}
+
+.auth-panel .cabecera {
+  padding: 26px 26px 0 26px;
+  text-align: center;
+}
+
+.auth-panel h2 {
+  font-family: 'Baloo 2', cursive;
+  color: #ff6f61;
+  font-size: 2rem;
+  margin-bottom: 8px;
+}
+
+.auth-panel p {
+  color: #555;
+  font-size: .95rem;
+  margin-bottom: 18px;
+}
+
+.auth-panel .cuerpo {
+  padding: 0 26px 26px 26px;
+}
+
+.auth-panel .acciones {
+  margin-top: 18px;
+  display: grid;
+  gap: 10px;
+}
+
+.auth-links {
+  margin-top: 14px;
+  text-align: center;
+  font-size: .92rem;
+  color: #555;
+}
+
+.auth-links a {
+  color: #1e88e5;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.auth-links a:hover {
+  text-decoration: underline;
+}
+
+/* Lado derecho: banner */
+.auth-banner {
+  border-radius: 22px;
+  min-height: 420px;
+  background:
+    linear-gradient(rgba(0,0,0,.35), rgba(0,0,0,.35)),
+    url('../img/FitKids_juntos.jpg') center/cover no-repeat;
+  box-shadow: 0 14px 32px rgba(0,0,0,.18);
+  padding: 26px;
+  display: flex;
+  align-items: flex-end;
+  color: white;
+}
+
+.auth-banner h3 {
+  font-family: 'Baloo 2', cursive;
+  font-size: 1.8rem;
+  margin-bottom: 6px;
+}
+
+.auth-banner p {
+  font-size: 0.98rem;
+  opacity: .95;
+}
+
+/* ================= FOOTER ================= */
+footer {
+  background: #1e88e5;
+  color: white;
+  text-align: center;
+  padding: 20px;
+  font-size: 0.9rem;
+}
+
+/* ================= RESPONSIVE ================= */
+@media (max-width: 900px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+
+  .seccion-flex {
+    flex-direction: column;
+  }
+
+  .hero h2 {
+    font-size: 2.2rem;
+  }
+
+  .menu {
+    justify-content: center;
+  }
+
+   .seccion-flex {
+    flex-direction: column;
+  }
+
+  .seccion-flex img {
+    max-width: 520px;
+  }
+
+  .grid-tienda{
+    grid-template-columns: 1fr;
+  }
+
+  .producto .thumb{
+    height: 210px;
+  }
+
+  .auth-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .auth-banner {
+    min-height: 240px;
+    order: -1;
+  }
+}

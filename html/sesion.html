@@ -1,28 +1,77 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>FitKids</title>
-    <link rel="icon" href="../img/logo_fit_kids.png" type="image/png">
-    <link rel="stylesheet" href="../css/styles.css">
+  <meta charset="UTF-8">
+  <title>Iniciar sesión | FitKids</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="../img/logo_fit_kids.png">
+  <link rel="stylesheet" href="../css/styles.css">
 </head>
-<body>
-    <header class="encabezado">
-        <div class="contenedor">
-            <div class="logo-titulo">
-                <a href="index.html">
-                <img src="../img/logo_fit_kids.png" alt="Logo FitKids" width="60" class="logo">
-                </a>
-                <h1 class="titulo">FitKids</h1>
-            </div>
 
-        <nav class="menu">
-            <a href="quienesSomos.html">QUIÉNES SOMOS</a>
-            <a href="registro.html">REGÍSTRATE</a>
-            <a href="sesion.html">INICIAR SESIÓN</a>
-        </nav>
-        </div>
-    </header>
+<body>
+
+<header class="encabezado">
+  <div class="contenedor">
+    <div class="logo-titulo">
+      <a href="index.html">
+        <img src="../img/logo_fit_kids.png" alt="Logo FitKids" class="logo">
+      </a>
+      <h1 class="titulo">FitKids</h1>
+    </div>
+
+    <nav class="menu">
+      <a href="quienesSomos.html">Quiénes somos</a>
+      <a href="tienda.html">Tienda</a>
+      <a href="registro.html">Regístrate</a>
+      <a href="sesion.html" class="activo">Iniciar sesión</a>
+    </nav>
+  </div>
+</header>
+
+<section class="auth">
+  <div class="contenedor auth-layout">
+
+    <!-- Banner (derecha/arriba en móvil) -->
+    <aside class="auth-banner">
+      <div>
+        <h3>Bienvenido(a) a FitKids</h3>
+        <p>Accede para revisar tus registros, consultas o información del servicio.</p>
+      </div>
+    </aside>
+
+    <!-- Tarjeta Login -->
+    <main class="auth-panel">
+      <div class="cabecera">
+        <h2>Iniciar sesión</h2>
+        <p>Ingresa tu correo y contraseña para continuar.</p>
+      </div>
+
+      <div class="cuerpo">
+        <form>
+          <label for="correo">Correo electrónico</label>
+          <input id="correo" type="email" placeholder="tucorreo@ejemplo.com" required>
+
+          <label for="pass">Contraseña</label>
+          <input id="pass" type="password" placeholder="••••••••" required>
+
+          <div class="acciones">
+            <button type="submit" class="btn-principal">Ingresar</button>
+            <a class="btn-secundario" href="registro.html" style="text-align:center;">Crear cuenta</a>
+          </div>
+
+          <div class="auth-links">
+            ¿Olvidaste tu contraseña? <a href="#">Recuperar</a>
+          </div>
+        </form>
+      </div>
+    </main>
+
+  </div>
+</section>
+
+<footer>
+  © 2025 FitKids · Bienestar físico infantil
+</footer>
+
 </body>
 </html>

@@ -1,156 +1,55 @@
-#QuienesSomos .contenedor {
-  display: flex;                    
-  align-items: center;               
-  justify-content: space-between;    
-  gap: 40px;                         
-  max-width: 1200px;                 
-  margin: 40px auto;               
-  padding: 0 20px;
+.seccion-quienes{
+  padding: 90px 20px;
 }
 
-#QuienesSomos .texto {
-  flex: 1 1 55%;                     
-  background-color: #ffffff;         
-  padding: 25px;
-  border-radius: 15px;               
-  box-shadow: 0 6px 15px rgba(0,0,0,0.1);
-  text-align: left;
-  transition: transform 0.4s ease;               
+.seccion-quienes .contenedor{
+  display: grid;
+  grid-template-columns: 1fr 1.3fr; /* imagen manda */
+  gap: 60px;
+  align-items: center;
 }
 
-#QuienesSomos .texto:hover{
-  transform: translateY(-4px);
+/* Texto */
+.seccion-quienes .texto{
+  background: #fff;
+  padding: 32px 34px;
+  border-radius: 22px;
+  box-shadow: 0 10px 26px rgba(0,0,0,.10);
 }
 
-#QuienesSomos .texto h2 {
-  color: #ff6f61;                   
+.seccion-quienes h2{
   font-family: 'Baloo 2', cursive;
-  font-size: 2rem;
-  margin-bottom: 15px;
+  font-size: 2.1rem;
+  color: #ff6f61;
+  margin-bottom: 18px;
 }
 
-#QuienesSomos .texto p {
-  font-family: 'Poppins', sans-serif;
-  font-size: 1rem;
-  line-height: 1.6;
-  color: #333;
+.seccion-quienes p{
+  font-size: .95rem;
+  line-height: 1.7;
+  color: #444;
+  margin-bottom: 14px;
 }
 
-#QuienesSomos .imagen {
-  flex: 1 1 45%;          
-  display: flex;
-  justify-content: center;
-  transition: transform 0.4s ease;  
+/* Imagen */
+.seccion-quienes img{
+  width: 100%;
+  height: auto;
+  border-radius: 26px;
+  box-shadow: 0 18px 40px rgba(0,0,0,.22);
 }
 
-#QuienesSomos .imagen:hover{
-  transform: translateY(-4px);
+/* Alternar */
+.seccion-quienes.reverse .contenedor{
+  grid-template-columns: 1.3fr 1fr;
 }
 
-#QuienesSomos .imagen img {
-  max-width: 100%;
-  border-radius: 15px;
-  box-shadow: 0 6px 18px rgba(0,0,0,0.08);
-}
-
-#QueBuscamos .contenedor {
-  display: flex;                    
-  align-items: center;               
-  justify-content: space-between;    
-  gap: 40px;                         
-  max-width: 1200px;                 
-  margin: 40px auto;               
-  padding: 0 20px;
-}
-
-#QueBuscamos .imagen {
-  flex: 1 1 45%;          
-  display: flex;
-  justify-content: center;
-  transition: transform 0.4s ease;
-}
-
-#QueBuscamos .imagen img {
-  max-width: 100%;
-  border-radius: 15px;
-  box-shadow: 0 6px 18px rgba(0,0,0,0.08);
-}
-
-#QueBuscamos .imagen:hover{
-  transform: translateY(-4px);
-}
-
-#QueBuscamos .texto {
-  flex: 1 1 55%;                     
-  background-color: #ffffff;         
-  padding: 25px;
-  border-radius: 15px;               
-  box-shadow: 0 6px 15px rgba(0,0,0,0.1);
-  text-align: left;
-  transition: transform 0.4s ease;                 
-}
-
-#QueBuscamos .texto:hover{
-  transform: translateY(-4px);
-}
-
-#QueBuscamos .texto h2 {
-  color: #ff6f61;                   
-  font-family: 'Baloo 2', cursive;
-  font-size: 2rem;
-  margin-bottom: 15px;
-}
-
-#QueBuscamos .texto p {
-  font-family: 'Poppins', sans-serif;
-  font-size: 1rem;
-  line-height: 1.6;
-  color: #333;
-}
-
-#Informes .contenedor {
-  display: flex;                    
-  align-items: center;               
-  justify-content: space-between;    
-  gap: 40px;                         
-  max-width: 1200px;                 
-  margin: 40px auto;               
-  padding: 0 20px;
-}
-
-#Informes .imagen {
-  flex: 1 1 45%;          
-  display: flex;
-  justify-content: center;
-  transition: transform 0.4s ease;
-}
-
-#Informes .imagen img {
-  max-width: 100%;
-  border-radius: 15px;
-  box-shadow: 0 6px 18px rgba(0,0,0,0.08);
-}
-
-#Informes .texto {
-  flex: 1 1 55%;                     
-  background-color: #ffffff;         
-  padding: 25px;
-  border-radius: 15px;               
-  box-shadow: 0 6px 15px rgba(0,0,0,0.1);
-  text-align: left;
-  transition: transform 0.4s ease;                 
-}
-
-#Informes .texto h2 {
-  color: #ff6f61;                   
-  font-family: 'Baloo 2', cursive;
-  font-size: 2rem;
-  margin-bottom: 15px;
-}
-
-#Informes .texto p {
-  font-family: 'Poppins', sans-serif;
-  font-size: 1rem;
-  line-height: 1.6;
-  color: #333;
+@media (max-width: 900px){
+  .seccion-quienes .contenedor{
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+  .seccion-quienes h2{
+    text-align: center;
+  }
 }
