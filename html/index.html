@@ -13,13 +13,16 @@
 <header class="encabezado">
   <div class="contenedor">
     <div class="logo-titulo">
-      <img src="../img/logo_fit_kids.png" class="logo" alt="FitKids">
+      <a href="index.html">
+        <img src="../img/logo_fit_kids.png" alt="Logo FitKids" class="logo">
+      </a>
       <h1 class="titulo">FitKids</h1>
     </div>
 
     <nav class="menu">
       <a href="quienesSomos.html">Quiénes somos</a>
       <a href="nuestraTienda.html">Tienda</a>
+      <a href="nuestrasSedes.html">Nuestras Sedes</a>
       <a href="registro.html">Regístrate</a>
       <a href="sesion.html">Iniciar sesión</a>
     </nav>
@@ -43,23 +46,92 @@
         <div class="grid">
             <div class="card">
             <h4>Coordinación</h4>
+            <img src="../img/Coordinacion_Fitkids.jpg" alt="coordinacion">
             <p>Desarrollo motriz mediante juegos y circuitos dinámicos.</p>
             </div>
             <div class="card">
             <h4>Fuerza y Resistencia</h4>
+            <img src="../img/Fuerza_Fitkids.jpg" alt="fuerza">
             <p>Entrenamiento funcional adaptado a cada edad.</p>
             </div>
             <div class="card">
             <h4>Confianza</h4>
+            <img src="../img/Confianza_Fitkids.jpg" alt="confianza">
             <p>Niños seguros, activos y con hábitos saludables.</p>
             </div>
         </div>
     </div>
 </section>
 
-<footer>
-  © 2025 FitKids · Bienestar físico infantil
+<button class="sidechat-btn" id="sideChatOpen" aria-controls="sideChat" aria-expanded="false">
+  💬 Asistente
+</button>
+
+<div class="sidechat-overlay" id="sideChatOverlay" hidden></div>
+
+<aside class="sidechat" id="sideChat" aria-hidden="true">
+  <div class="sidechat-header">
+    <div>
+      <h3>Asistente FitKids</h3>
+      <p>Respuestas rápidas</p>
+    </div>
+    <button class="sidechat-close" id="sideChatClose" aria-label="Cerrar">✕</button>
+  </div>
+
+  <div class="sidechat-quick">
+    <button class="qbtn" data-q="¿Qué es FitKids?">¿Qué es FitKids?</button>
+    <button class="qbtn" data-q="¿Qué edades atienden?">¿Qué edades atienden?</button>
+    <button class="qbtn" data-q="¿Qué sedes tienen?">¿Qué sedes tienen?</button>
+  </div>
+
+  <div class="sidechat-body" id="sideChatBody">
+    <div class="bubble bot">¡Hola! 👋 Soy el asistente de FitKids.</div>
+  </div>
+
+  <div class="sidechat-input">
+    <input id="sideChatInput" type="text" placeholder="Escribe aquí..." autocomplete="off">
+    <button id="sideChatSend">Enviar</button>
+  </div>
+</aside>
+
+<footer class="footer">
+  <div class="contenedor footer-grid">
+
+    <div class="footer-col">
+      <h3 class="footer-logo">FitKids</h3>
+      <p>
+        Bienestar físico infantil a través del movimiento,
+        el juego y el entrenamiento pre-operacional.
+      </p>
+    </div>
+
+    <div class="footer-col">
+      <h4>Enlaces</h4>
+      <ul>
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="quienesSomos.html">Quiénes somos</a></li>
+        <li><a href="nuestraTienda.html">Tienda</a></li>
+        <li><a href="nuestrasSedes.html">Nuestras sedes</a></li>
+        <li><a href="registro.html">Regístrate</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-col">
+      <h4>Contacto</h4>
+      <ul>
+        <li>📍 Arequipa, Perú</li>
+        <li>📞 +51 953 721 561</li>
+        <li>✉️ contacto@fitkids.pe</li>
+      </ul>
+    </div>
+
+  </div>
+
+  <div class="footer-bottom">
+    © 2025 FitKids · Bienestar físico infantil
+  </div>
 </footer>
+<script src="../js/chatbot.js"></script>
 
 </body>
 </html>
