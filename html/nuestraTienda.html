@@ -51,26 +51,29 @@
 
     <div class="grid-tienda">
       <article class="producto">
-        <img class="thumb" src="../img/estacion.png" alt="Plan Inicial">
+        <img class="thumb" src="../img/estacion.png" alt="Plan Paucarpata">
         <div class="info">
-          <span class="badge">Recomendado</span>
-          <h3>Plan Inicial</h3>
-          <p>Ideal para comenzar: coordinación, equilibrio y juegos guiados.</p>
+          <span class="badge">Paucarpata</span>
+          <h3>Plan Paucarpata</h3>
+          <p>Recomendado si vives por Paucarpata y Jose Luis Bustamante y Rivero: Lunes, Miércoles y Viernes.</p>
+          <p>De 4:30 pm a 6:00 pm</p>
           <div class="meta">
-            <span class="precio">S/ 99 / mes</span>
+            <span class="precio">S/ 90 / mes</span>
             <a class="btn-secundario" href="registro.html">Inscribirme</a>
           </div>
         </div>
       </article>
 
       <article class="producto">
-        <img class="thumb" src="../img/FitKids_juntos.jpg" alt="Plan Progreso">
+        <img class="thumb" src="../img/FitKids_juntos.jpg" alt="Plan Recoleta">
         <div class="info">
-          <span class="badge">Progreso</span>
-          <h3>Plan Progreso</h3>
-          <p>Más sesiones y retos: fuerza funcional y resistencia adaptada.</p>
+          <span class="badge">Recoleta</span>
+          <h3>Plan Recoleta</h3>
+          <p>Recomendado si vives en Yanahuara, Cerro Colorado, etc.</p>
+          <p>Martes y jueves de 4:30 pm a 6 pm</p>
+          <p>Sábado de 9 am a 10:30 am</p>
           <div class="meta">
-            <span class="precio">S/ 149 / mes</span>
+            <span class="precio">S/ 90 / mes</span>
             <a class="btn-secundario" href="registro.html">Inscribirme</a>
           </div>
         </div>
@@ -81,9 +84,10 @@
         <div class="info">
           <span class="badge">Full</span>
           <h3>Plan Full</h3>
-          <p>Entrenamiento + juegos avanzados + seguimiento de hábitos.</p>
+          <p>Combina ambos lugares y ¡diviértete con nosotros!</p>
+          <p>¡Te regalamos un full kit!</p>
           <div class="meta">
-            <span class="precio">S/ 199 / mes</span>
+            <span class="precio">S/ 150 / mes</span>
             <a class="btn-secundario" href="registro.html">Inscribirme</a>
           </div>
         </div>
@@ -105,7 +109,14 @@
           <p>Actividades simples para practicar coordinación y equilibrio en casa.</p>
           <div class="meta">
             <span class="precio">S/ 49</span>
-            <a class="btn-secundario" href="registro.html">Pedir info</a>
+            <a class="btn-secundario add-to-cart"
+               href="#"
+               data-nombre="Kit Coordinación"
+               data-precio="49"
+               data-img="../img/paracaidas_fitkids.png"
+               data-detalle="Kit (En casa)">
+              Agregar al carrito
+            </a>
           </div>
         </div>
       </article>
@@ -118,7 +129,14 @@
           <p>Retos de movimiento y juegos guiados para hábitos saludables.</p>
           <div class="meta">
             <span class="precio">S/ 59</span>
-            <a class="btn-secundario" href="registro.html">Pedir info</a>
+            <a class="btn-secundario add-to-cart"
+               href="#"
+               data-nombre="Kit Movimiento"
+               data-precio="59"
+               data-img="../img/estacion.png"
+               data-detalle="Kit (Juego)">
+              Agregar al carrito
+            </a>
           </div>
         </div>
       </article>
@@ -131,7 +149,14 @@
           <p>Guía para practicar en familia: motivación, rutinas cortas y juego.</p>
           <div class="meta">
             <span class="precio">S/ 69</span>
-            <a class="btn-secundario" href="registro.html">Pedir info</a>
+            <a class="btn-secundario add-to-cart"
+               href="#"
+               data-nombre="Kit Familiar"
+               data-precio="69"
+               data-img="../img/FitKids_juntos.jpg"
+               data-detalle="Kit (Familiar)">
+              Agregar al carrito
+            </a>
           </div>
         </div>
       </article>
@@ -145,40 +170,68 @@
 
     <div class="grid-tienda">
       <article class="producto">
-        <img class="thumb" src="../img/fondo_Fitkids.jpg" alt="Botella FitKids">
+        <img class="thumb" src="../img/fondo_Fitkids.jpg" alt="Mochila FitKids">
         <div class="info">
           <span class="badge">Accesorio</span>
-          <h3>Botella FitKids</h3>
-          <p>Hidratación para niños durante las sesiones (material ligero).</p>
+          <h3>Mochila FitKids</h3>
+          <p>Ideal para llevar todos tus implementos deportivos.</p>
           <div class="meta">
-            <span class="precio">S/ 25</span>
-            <a class="btn-secundario" href="registro.html">Pedir info</a>
+            <span class="precio">S/ 40</span>
+            <a class="btn-secundario add-to-cart"
+               href="#"
+               data-nombre="Mochila FitKids"
+               data-precio="40"
+               data-img="../img/fondo_Fitkids.jpg"
+               data-detalle="Accesorio">
+              Agregar al carrito
+            </a>
           </div>
         </div>
       </article>
 
       <article class="producto">
-        <img class="thumb" src="../img/fondo_Fitkids.jpg" alt="Polo FitKids">
+        <img class="thumb" id="poloImg" src="../img/Polo_Negro_Fitkids.jpeg" alt="Polo FitKids">
         <div class="info">
           <span class="badge">Merch</span>
           <h3>Polo FitKids</h3>
           <p>Ropa cómoda para juego y movimiento (tallas infantiles).</p>
+
+          <div class="colores">
+            <button class="color negro activo" onclick="cambiarPolo('negro')" type="button"></button>
+            <button class="color azul" onclick="cambiarPolo('azul')" type="button"></button>
+          </div>
+
           <div class="meta">
-            <span class="precio">S/ 35</span>
-            <a class="btn-secundario" href="registro.html">Pedir info</a>
+            <span class="precio">S/ 30</span>
+            <a class="btn-secundario add-to-cart"
+               href="#"
+               id="btnAddPolo"
+               data-nombre="Polo FitKids"
+               data-precio="30"
+               data-img="../img/Polo_Negro_Fitkids.jpeg"
+               data-detalle="Merch">
+              Agregar al carrito
+            </a>
           </div>
         </div>
       </article>
 
       <article class="producto">
-        <img class="thumb" src="../img/fondo_Fitkids.jpg" alt="Gorra FitKids">
+        <img class="thumb" src="../img/Gorro_Fitkids.jpeg" alt="Gorra FitKids">
         <div class="info">
           <span class="badge">Merch</span>
           <h3>Gorra FitKids</h3>
           <p>Accesorio ideal para actividades al aire libre.</p>
           <div class="meta">
-            <span class="precio">S/ 28</span>
-            <a class="btn-secundario" href="registro.html">Pedir info</a>
+            <span class="precio">S/ 20</span>
+            <a class="btn-secundario add-to-cart"
+               href="#"
+               data-nombre="Gorra FitKids"
+               data-precio="20"
+               data-img="../img/Gorro_Fitkids.jpeg"
+               data-detalle="Merch">
+              Agregar al carrito
+            </a>
           </div>
         </div>
       </article>
@@ -198,9 +251,92 @@
   </div>
 </section>
 
+<button class="cart-btn" id="cartOpen" aria-controls="cartPanel" aria-expanded="false">
+  🛒 <span class="cart-count" id="cartCount">0</span>
+</button>
+
+<div class="cart-overlay" id="cartOverlay" hidden></div>
+
+<aside class="cart" id="cartPanel" aria-hidden="true">
+  <div class="cart-header">
+    <div>
+      <h3>Carrito</h3>
+      <p>Productos seleccionados</p>
+    </div>
+    <button class="cart-close" id="cartClose" aria-label="Cerrar">✕</button>
+  </div>
+
+  <div class="cart-body" id="cartItems"></div>
+
+  <div class="cart-footer">
+    <div class="cart-total">
+      <span>Total</span>
+      <strong id="cartTotal">S/ 0</strong>
+    </div>
+
+    <div class="cart-actions">
+      <button class="btn-secundario" id="cartClear" type="button">Vaciar</button>
+      <a class="btn-principal" href="registro.html" style="text-align:center;">Pagar / Confirmar</a>
+    </div>
+  </div>
+</aside>
+
+<button class="sidechat-btn" id="sideChatOpen" aria-controls="sideChat" aria-expanded="false">
+  💬 Asistente
+</button>
+
+<div class="sidechat-overlay" id="sideChatOverlay" hidden></div>
+
+<aside class="sidechat" id="sideChat" aria-hidden="true">
+  <div class="sidechat-header">
+    <div>
+      <h3>Asistente FitKids</h3>
+      <p>Respuestas rápidas</p>
+    </div>
+    <button class="sidechat-close" id="sideChatClose" aria-label="Cerrar">✕</button>
+  </div>
+
+  <div class="sidechat-quick">
+    <button class="qbtn" data-q="¿Qué es FitKids?">¿Qué es FitKids?</button>
+    <button class="qbtn" data-q="¿Qué edades atienden?">¿Qué edades atienden?</button>
+    <button class="qbtn" data-q="¿Qué sedes tienen?">¿Qué sedes tienen?</button>
+  </div>
+
+  <div class="sidechat-body" id="sideChatBody">
+    <div class="bubble bot">¡Hola! 👋 Soy el asistente de FitKids.</div>
+  </div>
+
+  <div class="sidechat-input">
+    <input id="sideChatInput" type="text" placeholder="Escribe aquí..." autocomplete="off">
+    <button id="sideChatSend">Enviar</button>
+  </div>
+</aside>
+
+<div class="social-bubbles">
+  <a href="https://wa.me/51953721560"
+     class="social-bubble whatsapp"
+     target="_blank"
+     aria-label="WhatsApp">
+    <img src="../img/wsp.png" alt="WhatsApp">
+  </a>
+
+  <a href="https://www.instagram.com/fitkidsaqp/"
+     class="social-bubble instagram"
+     target="_blank"
+     aria-label="Instagram">
+    <img src="../img/instagram.png" alt="Instagram">
+  </a>
+
+  <a href="https://www.facebook.com/FitKidsAqp"
+     class="social-bubble facebook"
+     target="_blank"
+     aria-label="Facebook">
+    <img src="../img/facebook.png" alt="Facebook">
+  </a>
+</div>
+
 <footer class="footer">
   <div class="contenedor footer-grid">
-
     <div class="footer-col">
       <h3 class="footer-logo">FitKids</h3>
       <p>
@@ -214,7 +350,7 @@
       <ul>
         <li><a href="index.html">Inicio</a></li>
         <li><a href="quienesSomos.html">Quiénes somos</a></li>
-        <li><a href="nuestraTienda.html">Tienda</a></li>
+        <li><a href="tienda.html">Tienda</a></li>
         <li><a href="nuestrasSedes.html">Nuestras sedes</a></li>
         <li><a href="registro.html">Regístrate</a></li>
       </ul>
@@ -224,11 +360,10 @@
       <h4>Contacto</h4>
       <ul>
         <li>📍 Arequipa, Perú</li>
-        <li>📞 +51 953 721 561</li>
+        <li>📞 +51 953 721 560</li>
         <li>✉️ contacto@fitkids.pe</li>
       </ul>
     </div>
-
   </div>
 
   <div class="footer-bottom">
@@ -236,5 +371,27 @@
   </div>
 </footer>
 
+<script src="../js/carrito.js"></script>
+<script src="../js/cambiarColor.js"></script>
+
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const btnAddPolo = document.getElementById("btnAddPolo");
+    const poloImg = document.getElementById("poloImg");
+
+    if(!btnAddPolo || !poloImg) return;
+
+    const syncImg = () => {
+      btnAddPolo.setAttribute("data-img", poloImg.getAttribute("src"));
+    };
+
+    syncImg();
+
+    document.querySelectorAll(".colores .color").forEach(b => {
+      b.addEventListener("click", () => setTimeout(syncImg, 0));
+    });
+  });
+</script>
+<script src="../js/chatbot.js"></script>
 </body>
 </html>

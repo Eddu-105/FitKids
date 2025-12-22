@@ -21,7 +21,7 @@
 
     <nav class="menu">
       <a href="quienesSomos.html">Quiénes somos</a>
-      <a href="tienda.html">Tienda</a>
+      <a href="nuestraTienda.html">Tienda</a>
       <a href="nuestrasSedes.html">Nuestras Sedes</a>
       <a href="registro.html">Regístrate</a>
       <a href="sesion.html" class="activo">Iniciar sesión</a>
@@ -68,6 +68,60 @@
   </div>
 </section>
 
+<button class="sidechat-btn" id="sideChatOpen" aria-controls="sideChat" aria-expanded="false">
+  💬 Asistente
+</button>
+
+<div class="sidechat-overlay" id="sideChatOverlay" hidden></div>
+
+<aside class="sidechat" id="sideChat" aria-hidden="true">
+  <div class="sidechat-header">
+    <div>
+      <h3>Asistente FitKids</h3>
+      <p>Respuestas rápidas</p>
+    </div>
+    <button class="sidechat-close" id="sideChatClose" aria-label="Cerrar">✕</button>
+  </div>
+
+  <div class="sidechat-quick">
+    <button class="qbtn" data-q="¿Qué es FitKids?">¿Qué es FitKids?</button>
+    <button class="qbtn" data-q="¿Qué edades atienden?">¿Qué edades atienden?</button>
+    <button class="qbtn" data-q="¿Qué sedes tienen?">¿Qué sedes tienen?</button>
+  </div>
+
+  <div class="sidechat-body" id="sideChatBody">
+    <div class="bubble bot">¡Hola! 👋 Soy el asistente de FitKids.</div>
+  </div>
+
+  <div class="sidechat-input">
+    <input id="sideChatInput" type="text" placeholder="Escribe aquí..." autocomplete="off">
+    <button id="sideChatSend">Enviar</button>
+  </div>
+</aside>
+
+<div class="social-bubbles">
+  <a href="https://wa.me/51953721560"
+     class="social-bubble whatsapp"
+     target="_blank"
+     aria-label="WhatsApp">
+    <img src="../img/wsp.png" alt="WhatsApp">
+  </a>
+
+  <a href="https://www.instagram.com/fitkidsaqp/"
+     class="social-bubble instagram"
+     target="_blank"
+     aria-label="Instagram">
+    <img src="../img/instagram.png" alt="Instagram">
+  </a>
+
+  <a href="https://www.facebook.com/FitKidsAqp"
+     class="social-bubble facebook"
+     target="_blank"
+     aria-label="Facebook">
+    <img src="../img/facebook.png" alt="Facebook">
+  </a>
+</div>
+
 <footer class="footer">
   <div class="contenedor footer-grid">
 
@@ -94,7 +148,7 @@
       <h4>Contacto</h4>
       <ul>
         <li>📍 Arequipa, Perú</li>
-        <li>📞 +51 953 721 561</li>
+        <li>📞 +51 953 721 560</li>
         <li>✉️ contacto@fitkids.pe</li>
       </ul>
     </div>
@@ -104,6 +158,6 @@
     © 2025 FitKids · Bienestar físico infantil
   </div>
 </footer>
-
+<script src="../js/chatbot.js"></script>
 </body>
 </html>
