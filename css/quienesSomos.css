@@ -1,55 +1,36 @@
 .seccion-quienes{
-  padding: 90px 20px;
+  padding:80px 0;
 }
 
 .seccion-quienes .contenedor{
-  display: grid;
-  grid-template-columns: 1fr 1.3fr; /* imagen manda */
-  gap: 60px;
-  align-items: center;
+  display:flex;
+  gap:40px;
+  align-items:center;
 }
 
-/* Texto */
+.seccion-quienes img{
+  width:50%;
+  border-radius:20px;
+}
+
 .seccion-quienes .texto{
-  background: #fff;
-  padding: 32px 34px;
-  border-radius: 22px;
-  box-shadow: 0 10px 26px rgba(0,0,0,.10);
+  background:#fff;
+  padding:30px;
+  border-radius:20px;
+  box-shadow:0 10px 25px rgba(0,0,0,.12);
 }
 
 .seccion-quienes h2{
-  font-family: 'Baloo 2', cursive;
-  font-size: 2.1rem;
-  color: #ff6f61;
-  margin-bottom: 18px;
+  font-family:'Baloo 2',cursive;
+  color:#ff6f61;
+  margin-bottom:15px;
 }
 
-.seccion-quienes p{
-  font-size: .95rem;
-  line-height: 1.7;
-  color: #444;
-  margin-bottom: 14px;
-}
-
-/* Imagen */
-.seccion-quienes img{
-  width: 100%;
-  height: auto;
-  border-radius: 26px;
-  box-shadow: 0 18px 40px rgba(0,0,0,.22);
-}
-
-/* Alternar */
-.seccion-quienes.reverse .contenedor{
-  grid-template-columns: 1.3fr 1fr;
-}
-
-@media (max-width: 900px){
+@media(max-width:900px){
   .seccion-quienes .contenedor{
-    grid-template-columns: 1fr;
-    gap: 40px;
+    flex-direction:column;
   }
-  .seccion-quienes h2{
-    text-align: center;
+  .seccion-quienes img{
+    width:100%;
   }
 }
