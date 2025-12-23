@@ -39,7 +39,7 @@ document.addEventListener("DOMContentLoaded", () => {
         msg: `Tenemos productos oficiales FitKids 👕
         <div class="chat-media">
             <a class="chat-cardlink" href="/tienda">
-                <img src="/static/img/tienda_fitkids.jpg" alt="Tienda FitKids">
+                <img src="/static/img/tienda_fitkids.png" alt="Tienda FitKids">
                 <div>
                     <strong>Ir a la tienda</strong>
                     <span>Ver productos disponibles</span>

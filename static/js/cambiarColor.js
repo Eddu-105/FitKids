@@ -4,10 +4,10 @@ function cambiarPolo(color){
   const img = document.getElementById("poloImg");
 
   if(color === "negro"){
-    img.src = "../img/Polo_Negro_Fitkids.jpeg";
+    img.src = "/static/img/Polo_Negro_Fitkids.jpeg";
     colorPolo = "Negro";
   } else if(color === "azul"){
-    img.src = "../img/Polo_Azul_Fitkids.jpeg";
+    img.src = "/static/img/Polo_Azul_Fitkids.jpeg";
     colorPolo = "Azul";
   }
 
