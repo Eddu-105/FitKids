@@ -69,6 +69,8 @@ function openCart(){
   overlay.hidden = false;
   panel.setAttribute("aria-hidden", "false");
   openBtn.setAttribute("aria-expanded", "true");
+
+  document.getElementById("sideChatOpen")?.classList.add("hide");
 }
 
 function closeCart(){
@@ -81,6 +83,8 @@ function closeCart(){
   overlay.hidden = true;
   panel.setAttribute("aria-hidden", "true");
   openBtn.setAttribute("aria-expanded", "false");
+
+  document.getElementById("sideChatOpen")?.classList.remove("hide");
 }
 
 document.addEventListener("DOMContentLoaded", () => {

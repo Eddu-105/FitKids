@@ -41,6 +41,12 @@ body {
   gap: 10px;
 }
 
+.logo-titulo img {
+  height: 48px;        
+  width: auto;         
+  object-fit: contain; 
+}
+
 .logo {
   height: 48px;
 }

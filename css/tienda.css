@@ -126,7 +126,6 @@
 
 .color.activo{ border-color: #000; }
 
-/* Meta */
 .producto .meta{
   display: flex;
   justify-content: space-between;
@@ -247,7 +246,9 @@
   flex-direction: column;
 }
 
-.cart.open{ transform: translateX(0); }
+.cart.open{ 
+  transform: translateX(0); 
+}
 
 .cart-header{
   background: #1e88e5;
@@ -354,6 +355,10 @@
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 10px;
+}
+
+.hide { 
+  display: none !important; 
 }
 
 /* ================= RESPONSIVE ================= */

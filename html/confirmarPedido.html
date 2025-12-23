@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Confirmar pedido | FitKids</title>
+
+  <link rel="icon" href="../img/logo_fit_kids.png">
+  <link rel="stylesheet" href="../css/styles.css">
+  <link rel="stylesheet" href="../css/confirmarPedido.css">
+</head>
+
+<body>
+
+  <header class="encabezado">
+    <div class="contenedor">
+      <div class="logo-titulo">
+        <a href="index.html" aria-label="Ir al inicio">
+          <img src="../img/logo_fit_kids.png" alt="FitKids">
+        </a>
+        <h1>FitKids</h1>
+      </div>
+
+      <nav class="menu">
+        <a href="index.html">Inicio</a>
+        <a href="quienesSomos.html">Quiénes somos</a>
+        <a href="nuestraTienda.html">Tienda</a>
+        <a href="nuestrasSedes.html">Sedes</a>
+        <a href="inscripciones.html">Inscripciones</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="cp-main">
+    <section class="cp-card">
+      <div class="cp-header">
+        <h2>Confirmar pedido</h2>
+        <p class="cp-subtitle">Revisa tu pedido antes de enviarlo.</p>
+      </div>
+
+      <div id="cpEmpty" class="cp-empty" hidden>
+        <p>No hay productos en tu carrito.</p>
+        <a class="cp-btn cp-btn-primary" href="nuestraTienda.html">Ir a la tienda</a>
+      </div>
+
+      <div id="cpContent" hidden>
+        <div class="cp-grid">
+          <div class="cp-resumen">
+            <h3>Resumen</h3>
+
+            <div id="cpItems" class="cp-items"></div>
+
+            <div class="cp-total">
+              <span>Total</span>
+              <strong id="cpTotal">S/ 0.00</strong>
+            </div>
+
+            <div class="cp-actions">
+              <a class="cp-btn cp-btn-ghost" href="nuestraTienda.html">Seguir comprando</a>
+              <button id="cpClear" class="cp-btn cp-btn-danger" type="button">Vaciar carrito</button>
+            </div>
+          </div>
+
+          <div class="cp-datos">
+            <h3>Datos para confirmar</h3>
+
+            <form id="cpForm" class="cp-form" novalidate>
+              <label class="cp-label">
+                Nombre (padre/madre o apoderado)
+                <input id="cpNombre" class="cp-input" type="text" placeholder="Ej: Ana Torres" required>
+              </label>
+
+              <label class="cp-label">
+                Correo electrónico
+                <input id="cpCorreo" class="cp-input" type="email" placeholder="Ej: ana@gmail.com" required>
+              </label>
+
+              <label class="cp-label">
+                Teléfono (opcional)
+                <input id="cpTelefono" class="cp-input" type="tel" placeholder="Ej: 999 888 777">
+              </label>
+
+              <button id="cpSend" class="cp-btn cp-btn-primary cp-btn-full" type="submit">
+                Enviar pedido
+              </button>
+
+              <p id="cpMsg" class="cp-msg" role="status" aria-live="polite"></p>
+            </form>
+
+            <p class="cp-note">
+              Al enviar, FitKids registrará tu pedido y se comunicará contigo para coordinar.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script src="../js/confirmarPedido.js"></script>
+</body>
+</html>
