@@ -9,7 +9,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const send = document.getElementById("sideChatSend");
 
     const respuestas = [
-    { keys: ["qué es", "fitkids", "que es"], msg: "FitKids es bienestar físico infantil con entrenamiento pre-operacional: juego, coordinación y movimiento seguro." },
+    { keys: ["qué es", "fitkids", "que es"], msg: "FitKids es bienestar físico infantil con entrenamiento pre-deportivo: juego, coordinación y movimiento seguro." },
     { keys: ["edad", "edades"], msg: "Trabajamos con niños desde los 4 años a 12 años." },
     { keys: ["ubicación", "ubicacion", "sede", "direccion", "dirección"],
         msg: `Estamos en Arequipa. Aquí puedes ver más información 👇
