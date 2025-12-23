@@ -3,7 +3,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const form = document.querySelector(".form-card form");
   if (!form) return;
 
-  const API_URL = "https://omezaro.pythonanywhere.com/api/inscripciones_create";
+  const API_URL = "/api/inscripciones_create";
 
   form.addEventListener("submit", async (e) => {
     e.preventDefault();

@@ -166,7 +166,7 @@
     btnSend.textContent = "Enviando...";
 
     try {
-    const API_URL = "https://omezaro.pythonanywhere.com/api/pedidos_create";
+    const API_URL = "/api/pedidos_create";
 
     const res = await fetch(API_URL, {
         method: "POST",

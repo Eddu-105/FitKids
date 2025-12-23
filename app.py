@@ -1,4 +1,4 @@
-from flask import Flask, request, jsonify
+from flask import Flask, request, jsonify, render_template
 import sqlite3
 import os
 
@@ -58,7 +58,7 @@ def init_db():
 init_db()
 
 # ===============================
-# CORS (para fetch desde tu web)
+# CORS (para fetch)
 # ===============================
 def cors(resp):
     resp.headers["Access-Control-Allow-Origin"] = "*"
@@ -66,15 +66,36 @@ def cors(resp):
     resp.headers["Access-Control-Allow-Methods"] = "GET,POST,OPTIONS"
     return resp
 
-# ===============================
-# HOME (TEST)
-# ===============================
-@app.get("/")
-def home():
-    return cors(jsonify({"ok": True, "msg": "API FitKids funcionando"}))
+# ==========================================================
+# FRONTEND (PÁGINAS HTML)
+# ==========================================================
+
+@app.route("/")
+def home_page():
+    return render_template("index.html")
+
+@app.route("/tienda")
+def tienda_page():
+    return render_template("nuestraTienda.html")
+
+@app.route("/inscripciones")
+def inscripciones_page():
+    return render_template("inscripciones.html")
+
+@app.route("/confirmar-pedido")
+def confirmar_pedido_page():
+    return render_template("confirmarPedido.html")
+
+@app.route("/sedes")
+def sedes_page():
+    return render_template("nuestrasSedes.html")
+
+@app.route("/quienes-somos")
+def quienes_somos_page():
+    return render_template("quienesSomos.html")
 
 # ==========================================================
-# PEDIDOS
+# API: PEDIDOS
 # ==========================================================
 
 @app.route("/api/pedidos_create", methods=["POST", "OPTIONS"])
@@ -144,25 +165,8 @@ def listar_pedidos():
     con.close()
     return cors(jsonify({"ok": True, "pedidos": pedidos}))
 
-@app.get("/api/pedidos_detalle")
-def listar_pedidos_detalle():
-    con = sqlite3.connect(DB_PATH)
-    con.row_factory = sqlite3.Row
-    cur = con.cursor()
-
-    cur.execute("""
-      SELECT d.*, p.nombre AS cliente, p.correo, p.created_at
-      FROM pedido_detalle d
-      JOIN pedidos p ON p.id = d.pedido_id
-      ORDER BY d.id DESC
-    """)
-    rows = [dict(r) for r in cur.fetchall()]
-
-    con.close()
-    return cors(jsonify({"ok": True, "detalle": rows}))
-
 # ==========================================================
-# INSCRIPCIONES
+# API: INSCRIPCIONES
 # ==========================================================
 
 @app.route("/api/inscripciones_create", methods=["POST", "OPTIONS"])

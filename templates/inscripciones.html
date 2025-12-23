@@ -2,11 +2,11 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
-  <title>Quiénes Somos | FitKids</title>
+  <title>Inscripción | FitKids</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="icon" href="../img/logo_fit_kids.png">
-  <link rel="stylesheet" href="../css/styles.css">
-  <link rel="stylesheet" href="../css/quienesSomos.css">
+  <link rel="icon" href="/static/img/logo_fit_kids.png">
+  <link rel="stylesheet" href="/static/css/styles.css">
+  <link rel="stylesheet" href="/static/css/inscripciones.css">
 </head>
 
 <body>
@@ -15,81 +15,50 @@
   <div class="contenedor">
     <div class="logo-titulo">
       <a href="index.html">
-        <img src="../img/logo_fit_kids.png" alt="Logo FitKids" class="logo">
+        <img src="/static/img/logo_fit_kids.png" alt="Logo FitKids" class="logo">
       </a>
       <h1 class="titulo">FitKids</h1>
     </div>
 
     <nav class="menu">
-      <a href="quienesSomos.html" class="activo">Quiénes somos</a>
+      <a href="quienesSomos.html">Quiénes somos</a>
       <a href="nuestraTienda.html">Tienda</a>
       <a href="nuestrasSedes.html">Nuestras Sedes</a>
-      <a href="inscripciones.html">Inscríbete</a>
+      <a href="inscripciones.html" class="activo">Inscríbete</a>
     </nav>
   </div>
 </header>
 
 <section class="seccion">
-  <div class="contenedor seccion-flex">
-    
-    <div class="texto">
-      <h2>¿Quiénes somos?</h2>
+  <div class="contenedor" style="display:flex; justify-content:center;">
+    <div class="form-card">
+      <h2>Inscripción</h2>
+      <p>Completa el formulario para inscribir a tu hijo(a).</p>
 
-      <p>
-        FitKids es un emprendimiento enfocado en el bienestar físico infantil,
-        diseñado especialmente para niños y jóvenes en etapa de desarrollo.
-      </p>
+      <form>
+        <label>Nombre del padre/madre</label>
+        <input type="text" required>
 
-      <p>
-        Nuestro enfoque se basa en el entrenamiento pre operacional, donde el
-        movimiento, el juego y la exploración corporal son las principales
-        herramientas de aprendizaje.
-      </p>
+        <label>Nombre del niño(a)</label>
+        <input type="text" required>
+
+        <label>Edad</label>
+        <input type="number" min="4" max="12" required>
+
+        <label>Sede</label>
+        <select name="sede">
+          <option value="paucarpata">Paucarpata</option>
+          <option value="recoleta">Recoleta</option>
+        </select>
+
+        <label>Correo electrónico</label>
+        <input type="email" required>
+
+        <button class="btn-principal" type="submit" style="width:100%; margin-top:15px;">
+          Enviar inscripción
+        </button>
+      </form>
     </div>
-
-    <img src="../img/FitKids_juntos.jpg" alt="Niños entrenando en FitKids">
-
-  </div>
-</section>
-
-<section class="seccion">
-  <div class="contenedor seccion-flex">
-
-    <img src="../img/estacion.png" alt="Entrenamiento funcional infantil">
-
-    <div class="texto">
-      <h2>Nuestro enfoque</h2>
-
-      <p>
-        En FitKids no trabajamos con rutinas de gimnasio tradicionales.
-        Diseñamos actividades lúdicas que fortalecen la coordinación,
-        el equilibrio y la resistencia de manera progresiva y segura.
-      </p>
-
-      <p>
-        Cada sesión está adaptada a la edad y capacidades de los niños,
-        promoviendo hábitos saludables desde temprana edad.
-      </p>
-    </div>
-
-  </div>
-</section>
-
-<section class="seccion">
-  <div class="contenedor seccion-flex">
-
-    <div class="texto">
-      <h2>¿Por qué FitKids?</h2>
-
-      <p>
-        Creemos que un niño activo es un niño más seguro, saludable y feliz.
-        Nuestro objetivo es acompañar su crecimiento físico y emocional
-        en un entorno positivo, controlado y motivador.
-      </p>
-    </div>
-
-    <img src="../img/paracaidas_fitkids.png" alt="Juego y desarrollo infantil">
-
   </div>
 </section>
 
@@ -119,7 +88,7 @@
   </div>
 
   <div class="sidechat-input">
-    <input id="sideChatInput" type="text" placeholder="Escribe aquí..." autocomplete="off">
+    <input id="sideChatInput" type="text" placeholder="Escribe aquí/static." autocomplete="off">
     <button id="sideChatSend">Enviar</button>
   </div>
 </aside>
@@ -129,21 +98,21 @@
      class="social-bubble whatsapp"
      target="_blank"
      aria-label="WhatsApp">
-    <img src="../img/wsp.png" alt="WhatsApp">
+    <img src="/static/img/wsp.png" alt="WhatsApp">
   </a>
 
   <a href="https://www.instagram.com/fitkidsaqp/"
      class="social-bubble instagram"
      target="_blank"
      aria-label="Instagram">
-    <img src="../img/instagram.png" alt="Instagram">
+    <img src="/static/img/instagram.png" alt="Instagram">
   </a>
 
   <a href="https://www.facebook.com/FitKidsAqp"
      class="social-bubble facebook"
      target="_blank"
      aria-label="Facebook">
-    <img src="../img/facebook.png" alt="Facebook">
+    <img src="/static/img/facebook.png" alt="Facebook">
   </a>
 </div>
 
@@ -184,6 +153,7 @@
     © 2025 FitKids · Bienestar físico infantil
   </div>
 </footer>
-<script src="../js/chatbot.js"></script>
+<script src="/static/js/chatbot.js"></script>
+<script src="/static/js/inscripciones.js"></script>
 </body>
 </html>
