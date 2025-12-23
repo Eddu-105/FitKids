@@ -5,6 +5,10 @@
   display:flex;
   justify-content:center;
   align-items:center;
+  background: linear-gradient(
+    rgba(30,136,229,.10),
+    rgba(255,111,97,.10)
+  );
 }
 
 /*====================CARD======================*/
