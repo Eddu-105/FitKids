@@ -26,6 +26,8 @@
   margin-bottom:15px;
 }
 
+/*=====================RESPONSIVE====================*/
+
 @media(max-width:900px){
   .seccion-quienes .contenedor{
     flex-direction:column;

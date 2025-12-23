@@ -1,3 +1,5 @@
+/*======================HERO TIENDA=====================*/
+
 .tienda-hero{
   padding: 70px 20px;
   background: linear-gradient(rgba(30,136,229,.10), rgba(255,111,97,.10));
@@ -103,7 +105,21 @@
   margin-bottom: 14px;
 }
 
-/* Colores (selección) */
+.producto .meta{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.precio{
+  font-weight: 800;
+  color: #1e88e5;
+}
+
+/*=======================SELECCION DE COLORES======================*/
+
 .colores{
   display: flex;
   gap: 10px;
@@ -126,18 +142,7 @@
 
 .color.activo{ border-color: #000; }
 
-.producto .meta{
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 10px;
-  flex-wrap: wrap;
-}
-
-.precio{
-  font-weight: 800;
-  color: #1e88e5;
-}
+/*==================ACCIONES====================*/
 
 .btn-secundario{
   display: inline-block;
@@ -356,6 +361,8 @@
   grid-template-columns: 1fr 1fr;
   gap: 10px;
 }
+
+/*===============HIDE================*/
 
 .hide { 
   display: none !important; 

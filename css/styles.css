@@ -1,5 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Baloo+2:wght@600;800&family=Poppins:wght@400;600&display=swap');
 
+/*========================RESET Y BODY========================*/
+
 * {
   margin: 0;
   padding: 0;
@@ -13,11 +15,39 @@ body {
   line-height: 1.6;
 }
 
+/*=======================LAYOUT GENERAL=======================*/
+
 .contenedor {
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 20px;
 }
+
+.seccion {
+  padding: 70px 20px;
+}
+
+.seccion-flex {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+
+.seccion-flex .texto {
+  flex: 1 1 55%;
+}
+
+.seccion-flex img {
+  flex: 0 1 45%;
+  max-width: 520px;   
+  width: 100%;
+  height: auto;
+  border-radius: 18px;
+  box-shadow: 0 10px 25px rgba(0,0,0,.12);
+  object-fit: cover;
+}
+
+/*=========================HEADER==========================*/
 
 .encabezado {
   position: sticky;
@@ -35,6 +65,10 @@ body {
   gap: 20px;
 }
 
+.logo {
+  height: 48px;
+}
+
 .logo-titulo {
   display: flex;
   align-items: center;
@@ -45,10 +79,6 @@ body {
   height: 48px;        
   width: auto;         
   object-fit: contain; 
-}
-
-.logo {
-  height: 48px;
 }
 
 .titulo {
@@ -77,6 +107,8 @@ body {
 .menu a.activo {
   background: rgba(30,136,229,.12);
 }
+
+/*===============================HERO=============================*/
 
 .hero {
   min-height: 85vh;
@@ -124,6 +156,8 @@ body {
   box-shadow: 0 10px 25px rgba(0,0,0,.25);
 }
 
+/*=======================SECCIONES INFORMATIVAS=======================*/
+
 .beneficios {
   padding: 80px 20px;
   background: white;
@@ -136,6 +170,8 @@ body {
   color: #ff6f61;
   margin-bottom: 40px;
 }
+
+/*=========================COMPONENTES REUTILIZABLES=========================*/
 
 .grid {
   display: grid;
@@ -170,6 +206,8 @@ body {
   margin-bottom: 10px;
   font-size: 1.3rem;
 }
+
+/*===============================REDES SOCIALES FLOTANTES==============================*/
 
 .social-bubbles{
   position: fixed;
@@ -212,30 +250,6 @@ body {
 
 .social-bubble.facebook{
   background: #1877f2;
-}
-
-.seccion {
-  padding: 70px 20px;
-}
-
-.seccion-flex {
-  display: flex;
-  align-items: center;
-  gap: 40px;
-}
-
-.seccion-flex .texto {
-  flex: 1 1 55%;
-}
-
-.seccion-flex img {
-  flex: 0 1 45%;
-  max-width: 520px;   
-  width: 100%;
-  height: auto;
-  border-radius: 18px;
-  box-shadow: 0 10px 25px rgba(0,0,0,.12);
-  object-fit: cover;
 }
 
 /* ================= FOOTER ================= */

@@ -166,10 +166,8 @@
     btnSend.textContent = "Enviando...";
 
     try {
-    // Cambia esta URL a tu endpoint real en hosting:
-    // Ej: https://tudominio.com/api/pedidos_create.php
-    const API_URL = "../api/pedidos_create.php";
-
+    const API_URL = "https://omezaro.pythonanywhere.com/api/pedidos_create";
+    
     const res = await fetch(API_URL, {
         method: "POST",
         headers: { "Content-Type": "application/json" },

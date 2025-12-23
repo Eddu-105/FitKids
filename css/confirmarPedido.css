@@ -1,3 +1,5 @@
+/*=====================LAYOUT===================*/
+
 .cp-main{
   padding: 24px 12px;
   display: flex;
@@ -11,6 +13,8 @@
   box-shadow: 0 10px 30px rgba(0,0,0,.08);
   padding: 18px;
 }
+
+/*====================HEADER======================*/
 
 .cp-header{
   display: flex;
@@ -30,6 +34,8 @@
   opacity: .75;
 }
 
+/*=========================ESTADOS========================*/
+
 .cp-empty{
   padding: 18px 6px;
   display: flex;
@@ -39,12 +45,20 @@
   flex-wrap: wrap;
 }
 
+[hidden] {
+  display: none !important;
+}
+
+/*=========================GRID=========================*/
+
 .cp-grid{
   margin-top: 16px;
   display: grid;
   grid-template-columns: 1.2fr .8fr;
   gap: 16px;
 }
+
+/*========================RESUMEN=========================*/
 
 .cp-resumen, .cp-datos{
   border: 1px solid rgba(0,0,0,.08);
@@ -116,6 +130,8 @@
   gap: 10px;
   flex-wrap: wrap;
 }
+
+/*===============================FORMULARIO==================================*/
 
 .cp-form{
   display: flex;
@@ -189,9 +205,7 @@
   font-size: .95rem;
 }
 
-[hidden] {
-  display: none !important;
-}
+/*==========================RESPONSIVE========================*/
 
 @media (max-width: 860px){
   .cp-grid{

@@ -1,3 +1,5 @@
+/*==============HERO==============*/
+
 .sedes-hero{
   padding: 70px 20px;
   background: linear-gradient(90deg, rgba(30,136,229,.12), rgba(255,111,97,.12));
@@ -20,6 +22,8 @@
   color: #444;
 }
 
+/*==============GRID===============*/
+
 .sedes{
   padding: 70px 20px;
 }
@@ -29,6 +33,8 @@
   grid-template-columns: repeat(3, 1fr);
   gap: 22px;
 }
+
+/*===================CARD==================*/
 
 .sede-card{
   background: #fff;
@@ -115,6 +121,8 @@
   background: rgba(30,136,229,.16);
 }
 
+/*===============NOTAS================*/
+
 .sedes-note{
   padding: 0 20px 70px 20px;
 }
@@ -143,6 +151,8 @@
 .sedes-note li{
   margin: 6px 0;
 }
+
+/*===================RESPONSIVE======================*/
 
 @media (max-width: 900px){
   .sedes-grid{
